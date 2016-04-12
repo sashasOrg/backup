@@ -1,0 +1,12 @@
+<div>
+  <h1 class="page-header">PORTFOLIO</h1>
+
+  <br />
+  <a ng-controller="logoutController" ui-sref="login" ng-click='logout()'><button  class="btn btn-info" ng-show="userLogged">Log out</button></a>
+</div>
+<div>
+  {{currentUserCookie}}
+  <h1>{{currentUserCookie.username}}</h1>
+  <h2>{{currentUserCookie.firstName}} {{currentUserCookie.lastName}}</h2>
+  <h2>{{currentUserCookie.email}}</h2>
+</div>

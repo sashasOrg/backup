@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  <html ng-app="SashasApp">
+    <head>
+      <meta charset="UTF-8"/>
+
+      <link rel="stylesheet" type="text/css" href="css/style.css"/>
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css"/>
+    </head>
+    <body>
+      <a ui-sref="home">Home</a>
+      <a ui-sref="portfolio">Portfolio</a>
+      <a ui-sref="form">Form</a>
+      <a ui-sref="login">Login</a>
+      <a ui-sref="register">Register</a>
+      <a ui-sref="admin">Admin</a>
+      <div ui-view></div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular-cookies.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/controllers/mainController.js"></script>
+    <script src="./js/controllers/authController.js"></script>
+    <script src="./js/controllers/formController.js"></script>
+    <script src="./js/controllers/userController.js"></script>
+    <script src="./js/services/mainService.js"></script>
+    <script src="./js/services/authService.js"></script>
+    <script src="./js/services/formService.js"></script>
+    <script src="./js/services/userService.js"></script>
+  </html>

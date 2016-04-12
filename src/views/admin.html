@@ -1,0 +1,43 @@
+<div>
+
+  <h1>Admin</h1>
+
+
+
+<form  class="form" ng-submit="anyfund()">
+    <div hide-form="showing" class="form-group">
+      <label hide-form="showing">Name</label>
+      <input hide-form="showing" type="text" class="form-control" name="name" ng-model="newfundForm.name" required>
+      <label hide-form="showing">Symbol</label>
+      <input hide-form="showing" type="text" class="form-control" name="symbol" ng-model="newfundForm.symbol" required>
+
+      <!-- <label hide-form="showing">Price</label>
+
+      <input hide-form="showing" type="text" class="form-control" name="price" ng-model="newfundForm.price" required> -->
+
+      <label hide-form="showing">Asset Class</label>
+      <input hide-form="showing" type="text" class="form-control" name="assetClass" ng-model="newfundForm.assetClass" required>
+      <label hide-form="showing">Beta</label>
+      <input hide-form="showing" type="text" class="form-control" name="beta" ng-model="newfundForm.beta" required>
+      <label hide-form="showing">Expense Ratio</label>
+      <input hide-form="showing" type="text" class="form-control" name="expenseRatio" ng-model="newfundForm.expenseRatio" required>
+      <label hide-form="showing">Load Type</label>
+      <input hide-form="showing" type="text" class="form-control" name="load" ng-model="newfundForm.load" required>
+      <label hide-form="showing">Risk Bracket</label>
+      <input hide-form="showing" type="text" class="form-control" name="riskBracket" ng-model="newfundForm.riskBracket" required>
+      <label hide-form="showing">Risk Potential</label>
+      <input hide-form="showing" type="text" class="form-control" name="riskPotential" ng-model="newfundForm.riskPotential" required>
+      </div>
+      <div>
+        <button ng-click="toggle()" >Add Fund</button>
+      </div>
+  </form>
+  <form ng-submit="getFund()">
+    <input class="form-control" ng-model="fund" type="text"/>
+    <button class="btn btn-info">Search Funds</button>
+  </form>
+  <div ng-repeat="fund in fund">
+    <a ng-click="getMoreInformation(fund.symbol)" ><h3>{{fund.symbol}} : {{fund.name}}</h3></a>
+  </div>
+  <a class="btn btn-default" role="button" ng-submit="delete(fund._id)">Delete</a>
+  </div>

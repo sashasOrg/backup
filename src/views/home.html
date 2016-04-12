@@ -1,0 +1,15 @@
+<div>
+  <h1 class="page-header">HOME</h1>
+  <form ng-submit="searchSymbols()">
+    <input class="form-control" ng-model="stockQuery" type="text"/>
+    <button class="btn btn-info">Search Stocks</button>
+  </form>
+  <div ng-repeat="company in data">
+    <a ng-click="getMoreInformation(company.symbol)" ui-sref="stock"><h3>{{company.symbol}}: {{company.name}}</h3></a>
+  </div>
+  <!--mutual fund info-->
+    <div ng-repeat="fund in fund">
+      <!-- <h3>{{fund.name}}</h3> -->
+      <h3>{{fund.symbol}}</h3>
+    </div>
+</div>
